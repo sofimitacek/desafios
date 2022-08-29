@@ -3,5 +3,5 @@ from family.views import list_familia
 
 
 urlpatterns = [
-    path('family', list_familia),
+    path('', list_familia),
 ]

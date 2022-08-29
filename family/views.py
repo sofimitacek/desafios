@@ -4,8 +4,9 @@ from django.template import Template, Context, loader
 from family.models import Familia
 
 
-def list_familia(self):
-    mihtml= open("C:\Users\chofy\OneDrive\Documentos\proyectosAA\familiares\familiares\family\templates\family_list.html")
+def list_familia(request):
+    mihtml= open("C:\\Users\\chofy\\OneDrive\\Documentos\\proyectosAA\\familiares\\familiares\\family\\templates\\family_list.html")
+    lista_familiares = Familia.objects.all()
     plantilla = Template(mihtml.read())
     mihtml.close()
     miContexto = Context()
